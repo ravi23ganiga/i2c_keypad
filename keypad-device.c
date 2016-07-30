@@ -1,3 +1,4 @@
+/* Add the header */
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/i2c.h>
@@ -21,7 +22,12 @@ hello_init(void)
 	/* TODO Find adapter number */
 	client = i2c_new_device (i2c_get_adapter(2), &key4949_devs);
 	if(client ==  NULL)
+	{
+		printk("i2c device add filed\r\n");
 		return -ENODEV;
+	}
+
+	return 0;
 #endif
 }
 
