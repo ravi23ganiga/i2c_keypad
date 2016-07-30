@@ -30,7 +30,7 @@ static struct i2c_device_id key4949_id[] = {
 
 MODULE_DEVICE_TABLE(i2c, key4949_id);
 
-static int ds1672_probe(struct i2c_client *client,
+static int key4949_id(struct i2c_client *client,
                         const struct i2c_device_id *id)
 {
 	printk(KERN_ALERT, "Key probe called\r\n");
